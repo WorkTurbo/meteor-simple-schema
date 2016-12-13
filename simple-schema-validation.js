@@ -278,11 +278,11 @@ doValidation1 = function doValidation1(obj, isModifier, isUpsert, keyToValidate,
     // since we don't know whether it will be an insert or update, we'll
     // validate upserts as if they will be an insert.
     if ("$setOnInsert" in mod) {
-      if (isUpsert) {
-        mod.$set = mod.$set || {};
-        mod.$set = _.extend(mod.$set, mod.$setOnInsert);
-      }
-      delete mod.$setOnInsert;
+      //if (isUpsert) {
+        //mod.$set = mod.$set || {};
+        //mod.$set = _.extend(mod.$set, mod.$setOnInsert);
+      //}
+      //delete mod.$setOnInsert;
     }
 
     // Loop through operators
