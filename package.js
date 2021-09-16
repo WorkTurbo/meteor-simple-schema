@@ -5,7 +5,7 @@ Package.describe({
   git: "https://github.com/aldeed/meteor-simple-schema.git"
 });
 
-Package.on_use(function(api) {
+Package.onUse(function(api) {
 
   if (api.versionsFrom) {
     api.use('deps@1.0.0');
@@ -18,7 +18,7 @@ Package.on_use(function(api) {
 
   api.use('mdg:validation-error@0.2.0', {unordered: true});
 
-  api.add_files([
+  api.addFiles([
     'string-polyfills.js',
     'string-humanize.js',
     'mongo-object.js',
@@ -33,7 +33,7 @@ Package.on_use(function(api) {
 
 });
 
-Package.on_test(function(api) {
+Package.onTest(function(api) {
 
   if (api.versionsFrom) {
     api.use("aldeed:simple-schema");
@@ -45,7 +45,7 @@ Package.on_test(function(api) {
     api.use(["simple-schema", "tinytest", "test-helpers", "underscore", "check"]);
   }
 
-  api.add_files([
+  api.addFiles([
     "simple-schema-tests.js",
     "mongo-object-tests.js",
     "humanize-tests.js",
